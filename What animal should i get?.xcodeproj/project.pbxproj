@@ -14,6 +14,8 @@
 		2B1C004425D6D70E00211BD8 /* What_animal_should_i_get_.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2B1C004225D6D70E00211BD8 /* What_animal_should_i_get_.xcdatamodeld */; };
 		2B1C004625D6D71100211BD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B1C004525D6D71100211BD8 /* Assets.xcassets */; };
 		2B1C004925D6D71100211BD8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B1C004725D6D71100211BD8 /* LaunchScreen.storyboard */; };
+		2B92FA2B25D84B9D001BC999 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B92FA2A25D84B9D001BC999 /* Question.swift */; };
+		2B92FA2E25D84BE3001BC999 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B92FA2D25D84BE3001BC999 /* Answer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		2B1C004525D6D71100211BD8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B1C004825D6D71100211BD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B1C004A25D6D71100211BD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B92FA2A25D84B9D001BC999 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		2B92FA2D25D84BE3001BC999 /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +62,66 @@
 		2B1C003825D6D70E00211BD8 /* What animal should i get? */ = {
 			isa = PBXGroup;
 			children = (
-				2B1C003925D6D70E00211BD8 /* AppDelegate.swift */,
-				2B1C003B25D6D70E00211BD8 /* SceneDelegate.swift */,
-				2B1C003D25D6D70E00211BD8 /* ViewController.swift */,
-				2B1C003F25D6D70E00211BD8 /* Main.storyboard */,
-				2B1C004525D6D71100211BD8 /* Assets.xcassets */,
-				2B1C004725D6D71100211BD8 /* LaunchScreen.storyboard */,
-				2B1C004A25D6D71100211BD8 /* Info.plist */,
+				2B1C005225D6D75B00211BD8 /* Presenters */,
+				2B1C005325D6D78400211BD8 /* PassiveViews */,
+				2B1C005125D6D74500211BD8 /* Models */,
+				2B1C005425D6D7B600211BD8 /* Storyboards */,
+				2B1C005625D6D80300211BD8 /* Sources */,
+				2B1C005525D6D7D700211BD8 /* SupportingFiles */,
 				2B1C004225D6D70E00211BD8 /* What_animal_should_i_get_.xcdatamodeld */,
 			);
 			path = "What animal should i get?";
+			sourceTree = "<group>";
+		};
+		2B1C005125D6D74500211BD8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2B92FA2A25D84B9D001BC999 /* Question.swift */,
+				2B92FA2D25D84BE3001BC999 /* Answer.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2B1C005225D6D75B00211BD8 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		2B1C005325D6D78400211BD8 /* PassiveViews */ = {
+			isa = PBXGroup;
+			children = (
+				2B1C003D25D6D70E00211BD8 /* ViewController.swift */,
+			);
+			path = PassiveViews;
+			sourceTree = "<group>";
+		};
+		2B1C005425D6D7B600211BD8 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				2B1C003F25D6D70E00211BD8 /* Main.storyboard */,
+				2B1C004725D6D71100211BD8 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		2B1C005525D6D7D700211BD8 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				2B1C003925D6D70E00211BD8 /* AppDelegate.swift */,
+				2B1C003B25D6D70E00211BD8 /* SceneDelegate.swift */,
+				2B1C004A25D6D71100211BD8 /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		2B1C005625D6D80300211BD8 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				2B1C004525D6D71100211BD8 /* Assets.xcassets */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,8 +194,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B92FA2B25D84B9D001BC999 /* Question.swift in Sources */,
 				2B1C003E25D6D70E00211BD8 /* ViewController.swift in Sources */,
 				2B1C003A25D6D70E00211BD8 /* AppDelegate.swift in Sources */,
+				2B92FA2E25D84BE3001BC999 /* Answer.swift in Sources */,
 				2B1C003C25D6D70E00211BD8 /* SceneDelegate.swift in Sources */,
 				2B1C004425D6D70E00211BD8 /* What_animal_should_i_get_.xcdatamodeld in Sources */,
 			);
@@ -291,7 +347,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "What animal should i get?/Info.plist";
+				INFOPLIST_FILE = "What animal should i get?/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -309,7 +365,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "What animal should i get?/Info.plist";
+				INFOPLIST_FILE = "What animal should i get?/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
