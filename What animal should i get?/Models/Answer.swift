@@ -5,13 +5,18 @@
 //  Created by Tanya on 13.02.2021.
 //
 
-enum AnimalType: Character {
-    case cat = "🐈"
+struct Answer {
+    let text: String // ответ (результаты)
+    let type: AnimalType // каждый ответ связан с животным (результаты)
+}
+
+enum AnimalType: Character { // такой тип из-за эмодзи (результаты)
+    case cat = "🐈" // каждый ответ связан с животными
     case dog = "🐩"
     case mouse = "🦝"
     case fish = "🐠"
     
-    var definition: String {
+    var definition: String { // связываем кейс с описанием (результаты)
         switch self {
         case .cat:
             return "You are restrained and love freedom. You value not the quantity, but the quality of your friends"
@@ -23,9 +28,4 @@ enum AnimalType: Character {
             return "You are calm and reasonable. You value consistency and comfort"
         }
     }
-}
-
-struct Answer {
-    let text: String
-    let type: AnimalType
 }

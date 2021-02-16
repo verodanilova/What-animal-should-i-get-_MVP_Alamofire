@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		2B1C003A25D6D70E00211BD8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1C003925D6D70E00211BD8 /* AppDelegate.swift */; };
 		2B1C003C25D6D70E00211BD8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1C003B25D6D70E00211BD8 /* SceneDelegate.swift */; };
-		2B1C003E25D6D70E00211BD8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1C003D25D6D70E00211BD8 /* ViewController.swift */; };
+		2B1C003E25D6D70E00211BD8 /* IntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1C003D25D6D70E00211BD8 /* IntroductionViewController.swift */; };
 		2B1C004125D6D70E00211BD8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B1C003F25D6D70E00211BD8 /* Main.storyboard */; };
 		2B1C004425D6D70E00211BD8 /* What_animal_should_i_get_.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2B1C004225D6D70E00211BD8 /* What_animal_should_i_get_.xcdatamodeld */; };
 		2B1C004625D6D71100211BD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B1C004525D6D71100211BD8 /* Assets.xcassets */; };
 		2B1C004925D6D71100211BD8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B1C004725D6D71100211BD8 /* LaunchScreen.storyboard */; };
+		2B30629425DAB15E00365EC4 /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B30629325DAB15E00365EC4 /* QuestionsViewController.swift */; };
+		2B30629725DAB1A100365EC4 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B30629625DAB1A100365EC4 /* ResultsViewController.swift */; };
 		2B92FA2B25D84B9D001BC999 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B92FA2A25D84B9D001BC999 /* Question.swift */; };
 		2B92FA2E25D84BE3001BC999 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B92FA2D25D84BE3001BC999 /* Answer.swift */; };
 /* End PBXBuildFile section */
@@ -22,12 +24,14 @@
 		2B1C003625D6D70E00211BD8 /* What animal should i get?.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "What animal should i get?.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B1C003925D6D70E00211BD8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B1C003B25D6D70E00211BD8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2B1C003D25D6D70E00211BD8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2B1C003D25D6D70E00211BD8 /* IntroductionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionViewController.swift; sourceTree = "<group>"; };
 		2B1C004025D6D70E00211BD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2B1C004325D6D70E00211BD8 /* What_animal_should_i_get_.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = What_animal_should_i_get_.xcdatamodel; sourceTree = "<group>"; };
 		2B1C004525D6D71100211BD8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B1C004825D6D71100211BD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B1C004A25D6D71100211BD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B30629325DAB15E00365EC4 /* QuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsViewController.swift; sourceTree = "<group>"; };
+		2B30629625DAB1A100365EC4 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		2B92FA2A25D84B9D001BC999 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		2B92FA2D25D84BE3001BC999 /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,7 +96,9 @@
 		2B1C005325D6D78400211BD8 /* PassiveViews */ = {
 			isa = PBXGroup;
 			children = (
-				2B1C003D25D6D70E00211BD8 /* ViewController.swift */,
+				2B1C003D25D6D70E00211BD8 /* IntroductionViewController.swift */,
+				2B30629325DAB15E00365EC4 /* QuestionsViewController.swift */,
+				2B30629625DAB1A100365EC4 /* ResultsViewController.swift */,
 			);
 			path = PassiveViews;
 			sourceTree = "<group>";
@@ -195,11 +201,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B92FA2B25D84B9D001BC999 /* Question.swift in Sources */,
-				2B1C003E25D6D70E00211BD8 /* ViewController.swift in Sources */,
+				2B30629425DAB15E00365EC4 /* QuestionsViewController.swift in Sources */,
+				2B1C003E25D6D70E00211BD8 /* IntroductionViewController.swift in Sources */,
 				2B1C003A25D6D70E00211BD8 /* AppDelegate.swift in Sources */,
 				2B92FA2E25D84BE3001BC999 /* Answer.swift in Sources */,
 				2B1C003C25D6D70E00211BD8 /* SceneDelegate.swift in Sources */,
 				2B1C004425D6D70E00211BD8 /* What_animal_should_i_get_.xcdatamodeld in Sources */,
+				2B30629725DAB1A100365EC4 /* ResultsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -5,20 +5,20 @@
 //  Created by Tanya on 13.02.2021.
 //
 
+struct Question {
+    let text: String // вопросы
+    let type: ResponseType // тип вопроса
+    let answers: [Answer] // каждый вопрос уже будет содержать ответы
+}
+
 enum ResponseType {
     case single // одиночные
     case multiple // множественные
     case ranged // диапозон
 }
 
-struct Question {
-    let text: String // вопросы
-    let type: ResponseType // тип вопроса
-    let answers: [Answer] // ответы
-}
-
 extension Question {
-    static func getQuestions() -> [Question] {
+    static func getQuestions() -> [Question] { // метод который возвращает массив с набором данных - статик - метод типа данных /мы его не сможем вызвать из экземпляра модели /надо обратиться к самой модели для вызова метода
         return [
             Question(
                 text: "How do you like to relax?",
