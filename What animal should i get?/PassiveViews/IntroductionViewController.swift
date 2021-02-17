@@ -7,7 +7,13 @@
 
 import UIKit
 
+private protocol IntroductionViewProtocol: class {
+    func unwind(segue: UIStoryboardSegue)
+}
+
 class IntroductionViewController: UIViewController {
-    
-    @IBAction func unwind(segue: UIStoryboardSegue) {}
+}
+
+extension IntroductionViewController: IntroductionViewProtocol {
+     @IBAction func unwind(segue: UIStoryboardSegue) {}
 }

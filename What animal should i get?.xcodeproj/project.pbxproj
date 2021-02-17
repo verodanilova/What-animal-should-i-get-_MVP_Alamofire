@@ -18,6 +18,9 @@
 		2B30629725DAB1A100365EC4 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B30629625DAB1A100365EC4 /* ResultsViewController.swift */; };
 		2B92FA2B25D84B9D001BC999 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B92FA2A25D84B9D001BC999 /* Question.swift */; };
 		2B92FA2E25D84BE3001BC999 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B92FA2D25D84BE3001BC999 /* Answer.swift */; };
+		2BCA437F25DDA8C700007501 /* IntroductionPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCA437E25DDA8C700007501 /* IntroductionPresenterProtocol.swift */; };
+		2BCA438225DDA8F800007501 /* QuestionsPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCA438125DDA8F800007501 /* QuestionsPresenterProtocol.swift */; };
+		2BCA438725DDA98800007501 /* ResultsPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCA438625DDA98800007501 /* ResultsPresenterProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		2B30629625DAB1A100365EC4 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		2B92FA2A25D84B9D001BC999 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		2B92FA2D25D84BE3001BC999 /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
+		2BCA437E25DDA8C700007501 /* IntroductionPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionPresenterProtocol.swift; sourceTree = "<group>"; };
+		2BCA438125DDA8F800007501 /* QuestionsPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsPresenterProtocol.swift; sourceTree = "<group>"; };
+		2BCA438625DDA98800007501 /* ResultsPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsPresenterProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +95,9 @@
 		2B1C005225D6D75B00211BD8 /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
+				2BCA438125DDA8F800007501 /* QuestionsPresenterProtocol.swift */,
+				2BCA438625DDA98800007501 /* ResultsPresenterProtocol.swift */,
+				2BCA437E25DDA8C700007501 /* IntroductionPresenterProtocol.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -96,9 +105,9 @@
 		2B1C005325D6D78400211BD8 /* PassiveViews */ = {
 			isa = PBXGroup;
 			children = (
-				2B1C003D25D6D70E00211BD8 /* IntroductionViewController.swift */,
 				2B30629325DAB15E00365EC4 /* QuestionsViewController.swift */,
 				2B30629625DAB1A100365EC4 /* ResultsViewController.swift */,
+				2B1C003D25D6D70E00211BD8 /* IntroductionViewController.swift */,
 			);
 			path = PassiveViews;
 			sourceTree = "<group>";
@@ -203,7 +212,10 @@
 				2B92FA2B25D84B9D001BC999 /* Question.swift in Sources */,
 				2B30629425DAB15E00365EC4 /* QuestionsViewController.swift in Sources */,
 				2B1C003E25D6D70E00211BD8 /* IntroductionViewController.swift in Sources */,
+				2BCA438225DDA8F800007501 /* QuestionsPresenterProtocol.swift in Sources */,
 				2B1C003A25D6D70E00211BD8 /* AppDelegate.swift in Sources */,
+				2BCA437F25DDA8C700007501 /* IntroductionPresenterProtocol.swift in Sources */,
+				2BCA438725DDA98800007501 /* ResultsPresenterProtocol.swift in Sources */,
 				2B92FA2E25D84BE3001BC999 /* Answer.swift in Sources */,
 				2B1C003C25D6D70E00211BD8 /* SceneDelegate.swift in Sources */,
 				2B1C004425D6D70E00211BD8 /* What_animal_should_i_get_.xcdatamodeld in Sources */,
