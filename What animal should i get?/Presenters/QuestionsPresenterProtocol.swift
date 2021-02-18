@@ -7,19 +7,18 @@
 
 import Foundation
 
-protocol QuestionsPresenterProtocol: class {
-    init(view: QuestionsPresenterProtocol, model: Question)
+protocol QuestionsPresenterProtocol {
+    init(viewQuestion: QuestionViewProtocol, modelQuestion: Question)
 }
 
 class QuestionsPresenter: QuestionsPresenterProtocol {
+    unowned private let viewQuestion: QuestionViewProtocol
+    private let modelQuestion: Question
     
-    unowned private let view: QuestionsPresenterProtocol
-    private let model: Question
-    
-    required init(view: QuestionsPresenterProtocol, model: Question) {
-        self.view = view
-        self.model = model
+    required init(viewQuestion: QuestionViewProtocol, modelQuestion: Question) {
+        self.viewQuestion = viewQuestion
+        self.modelQuestion = modelQuestion
     }
-    
-    
 }
+
+

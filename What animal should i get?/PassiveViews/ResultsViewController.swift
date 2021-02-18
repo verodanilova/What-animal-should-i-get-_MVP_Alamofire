@@ -7,13 +7,12 @@
 
 import UIKit
 
-private protocol ResultsViewProtocol: class {
+ protocol ResultsViewProtocol: class {
     func updateResult()
     func updateUI(with animal: AnimalType)
 }
 
 class ResultsViewController: UIViewController {
-    
     @IBOutlet var animalTypeLabel: UILabel!
     @IBOutlet var discriptionLabel: UILabel!
     
@@ -29,8 +28,7 @@ class ResultsViewController: UIViewController {
 }
 
 extension ResultsViewController: ResultsViewProtocol {
-    
-    fileprivate func updateResult() {
+    internal func updateResult() {
         
         var frequencyOfAnimals: [AnimalType: Int] = [:]
         let animals = answers.map { $0.type }
@@ -49,7 +47,7 @@ extension ResultsViewController: ResultsViewProtocol {
         updateUI(with: mostFrequencyAnimal)
     }
     
-    fileprivate func updateUI(with animal: AnimalType) {
+    internal func updateUI(with animal: AnimalType) {
         animalTypeLabel.text = "Your animal - \(animal.rawValue)!"
         discriptionLabel.text = animal.definition
     }

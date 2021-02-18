@@ -7,13 +7,15 @@
 
 import UIKit
 
-private protocol QuestionViewProtocol: class {
+protocol QuestionViewProtocol: class {
+    
     func updateUI()
     func showCurrentAnswers(for type: ResponseType)
     func showSingleAnswers(with answers: [Answer])
     func showMultipleAnswers(with answers: [Answer])
     func showRangedAnswers(with answers: [Answer])
     func nextQuestion()
+    
 }
 
 class QuestionsViewController: UIViewController {
@@ -75,7 +77,6 @@ class QuestionsViewController: UIViewController {
     }
     
     @IBAction func rangedAnswerButtonPressed(_ sender: Any) {
-        
         let index = lrintf(rangedSlider.value)
         answersChoosen.append(currentAnswers[index])
         
@@ -85,13 +86,11 @@ class QuestionsViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let resultsVC = segue.destination as! ResultsViewController
         resultsVC.answers = answersChoosen
-        
     }
 }
 
 extension QuestionsViewController: QuestionViewProtocol {
-    
-    fileprivate func updateUI() {
+    internal func updateUI() {
         
         for stackView in [singleStackView, multipleStackView, rangedStackView] {
             stackView?.isHidden = true
@@ -109,7 +108,7 @@ extension QuestionsViewController: QuestionViewProtocol {
         showCurrentAnswers(for: currentQuestion.type)
     }
     
-    fileprivate func showCurrentAnswers(for type: ResponseType) {
+    internal func showCurrentAnswers(for type: ResponseType) {
         switch type {
         case .single: showSingleAnswers(with: currentAnswers)
         case .multiple: showMultipleAnswers(with: currentAnswers)
@@ -117,7 +116,7 @@ extension QuestionsViewController: QuestionViewProtocol {
         }
     }
     
-    fileprivate func showSingleAnswers(with answers: [Answer]) {
+    internal func showSingleAnswers(with answers: [Answer]) {
         singleStackView.isHidden = false
         
         for (button, answer) in zip(singleButtons, answers) {
@@ -125,7 +124,7 @@ extension QuestionsViewController: QuestionViewProtocol {
         }
     }
     
-    fileprivate func showMultipleAnswers(with answers: [Answer]) {
+    internal func showMultipleAnswers(with answers: [Answer]) {
         multipleStackView.isHidden = false
         
         for (label, answer) in zip(multipleLabels, answers) {
@@ -133,13 +132,13 @@ extension QuestionsViewController: QuestionViewProtocol {
         }
     }
     
-    fileprivate func showRangedAnswers(with answers: [Answer]) {
+    internal func showRangedAnswers(with answers: [Answer]) {
         rangedStackView.isHidden = false
         rangedLabels.first?.text = answers.first?.text
         rangedLabels.last?.text = answers.last?.text
     }
     
-    fileprivate func nextQuestion() {
+    internal func nextQuestion() {
         questionIndex += 1
         
         if questionIndex < questions.count {
