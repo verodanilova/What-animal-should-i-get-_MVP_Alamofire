@@ -40,7 +40,17 @@ class QuestionsViewController: UIViewController {
     
     @IBOutlet var questionProgressView: UIProgressView!
     
-    private let questions = Question.getQuestions()
+    //private var questions : [Question] = []
+    private var questions = Question.getQuestions()
+    
+    var network = NetworkManager()
+    
+    
+    
+    
+    
+    
+    
     private var questionIndex = 0
     private var answersChoosen: [Answer] = []
     private var currentAnswers: [Answer] {
@@ -52,6 +62,8 @@ class QuestionsViewController: UIViewController {
         
         updateUI() // скрываем стек
     }
+    
+    
     
     
     @IBAction func singleButtonAnswerPressed(_ sender: UIButton) {
@@ -147,4 +159,8 @@ extension QuestionsViewController: QuestionViewProtocol {
             performSegue(withIdentifier: "resultSegue", sender: nil)
         }
     }
+    
+    //internal func appendQuestion(_ Question:[Question]){
+        //questions = Question
+    //}
 }

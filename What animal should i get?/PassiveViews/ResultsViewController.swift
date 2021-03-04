@@ -49,7 +49,7 @@ extension ResultsViewController: ResultsViewProtocol {
     
     internal func updateUI(with animal: AnimalType) {
         animalTypeLabel.text = "Your animal - \(animal.rawValue)!"
-        discriptionLabel.text = animal.definition
+        discriptionLabel.text = animal.definitionAnimal
     }
 }
 

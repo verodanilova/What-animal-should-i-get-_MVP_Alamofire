@@ -5,26 +5,26 @@
 //  Created by Tanya on 13.02.2021.
 //
 
-struct Question {
+struct Question: Decodable { // создаем типы
     let text: String // вопросы
     let type: ResponseType // тип вопроса
     let answers: [Answer] // каждый вопрос уже будет содержать ответы
 }
 
-enum ResponseType {
+enum ResponseType: String, Decodable { // создаем типы
     case single // одиночные
     case multiple // множественные
     case ranged // диапозон
 }
 
 extension Question {
-     static func getQuestions() -> [Question] {
+    static func getQuestions() -> [Question] { //возвращает массив с обьектами структур
         return [
             Question(
                 text: "How do you like to relax?",
                 type: .single,
                 answers: [
-                    Answer(text: "Actively", type: .dog),
+                    Answer(text: "Actively", type: .cat),
                     Answer(text: "Passively", type: .fish),
                     Answer(text: "Always different", type: .cat),
                     Answer(text: "Rest - is not mine", type: .mouse)
@@ -50,4 +50,3 @@ extension Question {
         ]
     }
 }
-// метод который возвращает массив с набором данных - статик - метод типа данных /мы его не сможем вызвать из экземпляра модели /надо обратиться к самой модели для вызова метода
