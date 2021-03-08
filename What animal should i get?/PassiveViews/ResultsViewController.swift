@@ -7,7 +7,7 @@
 
 import UIKit
 
- protocol ResultsViewProtocol: class {
+protocol ResultsViewProtocol: class {
     func updateResult()
     func updateUI(with animal: AnimalType)
 }

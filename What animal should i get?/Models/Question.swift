@@ -5,20 +5,20 @@
 //  Created by Tanya on 13.02.2021.
 //
 
-struct Question: Decodable { // создаем типы
-    let text: String // вопросы
-    let type: ResponseType // тип вопроса
-    let answers: [Answer] // каждый вопрос уже будет содержать ответы
+struct Question: Decodable {
+    let text: String
+    let type: ResponseType
+    let answers: [Answer]
 }
 
-enum ResponseType: String, Decodable { // создаем типы
-    case single // одиночные
-    case multiple // множественные
-    case ranged // диапозон
+enum ResponseType: String, Decodable {
+    case single
+    case multiple
+    case ranged
 }
 
 extension Question {
-    static func getQuestions() -> [Question] { //возвращает массив с обьектами структур
+    static func getQuestions() -> [Question] { 
         return [
             Question(
                 text: "How do you like to relax?",

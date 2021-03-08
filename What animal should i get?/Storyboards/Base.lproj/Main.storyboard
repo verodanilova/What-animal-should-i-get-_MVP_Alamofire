@@ -232,6 +232,9 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="AlX-4n-Lob">
+                                <rect key="frame" x="150" y="230" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fyg-ah-TYE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -240,6 +243,7 @@
                             <constraint firstItem="fyg-ah-TYE" firstAttribute="trailing" secondItem="OZI-dv-gVR" secondAttribute="trailing" constant="20" id="5cp-99-SOX"/>
                             <constraint firstItem="fyg-ah-TYE" firstAttribute="trailing" secondItem="1s1-9J-XE1" secondAttribute="trailing" constant="20" id="7Lh-Yg-wAp"/>
                             <constraint firstItem="1s1-9J-XE1" firstAttribute="centerY" secondItem="fyg-ah-TYE" secondAttribute="centerY" id="CNn-eQ-Yse"/>
+                            <constraint firstItem="AlX-4n-Lob" firstAttribute="centerX" secondItem="Dwt-uS-6nW" secondAttribute="centerX" id="EtN-RV-pWR"/>
                             <constraint firstItem="fyg-ah-TYE" firstAttribute="trailing" secondItem="Jzr-3t-atv" secondAttribute="trailing" constant="16" id="GbR-Ov-9tv"/>
                             <constraint firstItem="ZDp-xU-d6D" firstAttribute="leading" secondItem="fyg-ah-TYE" secondAttribute="leading" constant="20" id="LDL-bC-BKo"/>
                             <constraint firstItem="1s1-9J-XE1" firstAttribute="leading" secondItem="fyg-ah-TYE" secondAttribute="leading" constant="20" id="PmL-Vv-s8m"/>
@@ -250,11 +254,13 @@
                             <constraint firstItem="ZDp-xU-d6D" firstAttribute="centerY" secondItem="fyg-ah-TYE" secondAttribute="centerY" constant="-16" id="cES-sx-Hdn"/>
                             <constraint firstItem="Jzr-3t-atv" firstAttribute="top" secondItem="2rQ-F0-PPY" secondAttribute="bottom" constant="8" id="gJa-Mg-TgE"/>
                             <constraint firstItem="OZI-dv-gVR" firstAttribute="centerY" secondItem="fyg-ah-TYE" secondAttribute="centerY" id="pdQ-D2-fij"/>
+                            <constraint firstItem="AlX-4n-Lob" firstAttribute="centerY" secondItem="Dwt-uS-6nW" secondAttribute="centerY" id="rqq-Nf-02t"/>
                             <constraint firstItem="OZI-dv-gVR" firstAttribute="leading" secondItem="fyg-ah-TYE" secondAttribute="leading" constant="20" id="t2m-OY-Hx3"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Question № " id="umP-Hw-tMG"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="AlX-4n-Lob" id="cd9-sY-6kl"/>
                         <outlet property="multipleStackView" destination="ZDp-xU-d6D" id="Yey-JA-aD4"/>
                         <outlet property="questionLabel" destination="Jzr-3t-atv" id="EuV-N3-xvB"/>
                         <outlet property="questionProgressView" destination="2rQ-F0-PPY" id="miC-sm-mlj"/>
@@ -339,7 +345,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XHw-Io-gq4" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="UyU-od-S3z">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="102"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

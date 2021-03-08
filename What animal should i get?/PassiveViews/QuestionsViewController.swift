@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Alamofire
 
 protocol QuestionViewProtocol: class {
     
@@ -15,10 +16,12 @@ protocol QuestionViewProtocol: class {
     func showMultipleAnswers(with answers: [Answer])
     func showRangedAnswers(with answers: [Answer])
     func nextQuestion()
-    
+    func getNetworkQuestions()
 }
 
 class QuestionsViewController: UIViewController {
+    
+    @IBOutlet var activityIndicator: UIActivityIndicatorView!
     
     @IBOutlet var questionLabel: UILabel!
     
@@ -31,25 +34,16 @@ class QuestionsViewController: UIViewController {
     @IBOutlet var multipleSwitches: [UISwitch]!
     @IBOutlet var rangedLabels: [UILabel]!
     
-    @IBOutlet var rangedSlider: UISlider!{
-        didSet{
+    @IBOutlet var rangedSlider: UISlider!
+    
+    @IBOutlet var questionProgressView: UIProgressView!
+    
+    private var questions: [Question] = [] {
+        didSet {
             let answersCount = Float(questions[questionIndex].answers.count - 1)
             rangedSlider.maximumValue = answersCount
         }
     }
-    
-    @IBOutlet var questionProgressView: UIProgressView!
-    
-    //private var questions : [Question] = []
-    private var questions = Question.getQuestions()
-    
-    var network = NetworkManager()
-    
-    
-    
-    
-    
-    
     
     private var questionIndex = 0
     private var answersChoosen: [Answer] = []
@@ -59,12 +53,8 @@ class QuestionsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        updateUI() // скрываем стек
+        getNetworkQuestions()
     }
-    
-    
-    
     
     @IBAction func singleButtonAnswerPressed(_ sender: UIButton) {
         guard let currentIndex = singleButtons.firstIndex(of: sender) else {
@@ -76,7 +66,6 @@ class QuestionsViewController: UIViewController {
         
         nextQuestion()
     }
-    
     
     @IBAction func multipleAnswerPressed() {
         for (multipleSwitch, answer) in zip(multipleSwitches, currentAnswers) {
@@ -102,10 +91,34 @@ class QuestionsViewController: UIViewController {
 }
 
 extension QuestionsViewController: QuestionViewProtocol {
-    internal func updateUI() {
+    
+    func getNetworkQuestions() { 
+        activityIndicator.startAnimating()
+        
+        Question.getQuestionsNetwork(){ [self]
+            questionsFromJSON in
+            
+            if let networkQuestinos = questionsFromJSON {
+                for element in networkQuestinos{
+                    questions.append(element)
+                }
+                print(questions)
+            }
+            activityIndicator.hidesWhenStopped = true
+            updateUI()
+        }
+    }
+    
+    func updateUI() {
         
         for stackView in [singleStackView, multipleStackView, rangedStackView] {
             stackView?.isHidden = true
+        }
+        
+        guard questionIndex < questions.count else {
+            print("questionIndex: \(questionIndex)")
+            print("questions.count: \(questionIndex)")
+            return
         }
         
         let currentQuestion = questions[questionIndex]
@@ -120,7 +133,7 @@ extension QuestionsViewController: QuestionViewProtocol {
         showCurrentAnswers(for: currentQuestion.type)
     }
     
-    internal func showCurrentAnswers(for type: ResponseType) {
+    func showCurrentAnswers(for type: ResponseType) {
         switch type {
         case .single: showSingleAnswers(with: currentAnswers)
         case .multiple: showMultipleAnswers(with: currentAnswers)
@@ -128,7 +141,8 @@ extension QuestionsViewController: QuestionViewProtocol {
         }
     }
     
-    internal func showSingleAnswers(with answers: [Answer]) {
+    func showSingleAnswers(with answers: [Answer]) {
+        activityIndicator.isHidden = true
         singleStackView.isHidden = false
         
         for (button, answer) in zip(singleButtons, answers) {
@@ -136,7 +150,8 @@ extension QuestionsViewController: QuestionViewProtocol {
         }
     }
     
-    internal func showMultipleAnswers(with answers: [Answer]) {
+    func showMultipleAnswers(with answers: [Answer]) {
+        activityIndicator.isHidden = true
         multipleStackView.isHidden = false
         
         for (label, answer) in zip(multipleLabels, answers) {
@@ -144,23 +159,22 @@ extension QuestionsViewController: QuestionViewProtocol {
         }
     }
     
-    internal func showRangedAnswers(with answers: [Answer]) {
+    func showRangedAnswers(with answers: [Answer]) {
+        activityIndicator.isHidden = true
         rangedStackView.isHidden = false
         rangedLabels.first?.text = answers.first?.text
         rangedLabels.last?.text = answers.last?.text
     }
     
-    internal func nextQuestion() {
+    func nextQuestion() {
         questionIndex += 1
         
         if questionIndex < questions.count {
+            
             updateUI()
         } else {
             performSegue(withIdentifier: "resultSegue", sender: nil)
         }
     }
-    
-    //internal func appendQuestion(_ Question:[Question]){
-        //questions = Question
-    //}
 }
+

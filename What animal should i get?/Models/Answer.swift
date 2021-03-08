@@ -6,24 +6,24 @@
 //
 
 struct Answer: Decodable {
-    let text: String // ответ (результаты)
-    let type: AnimalType // каждый ответ связан с животным (результаты)
+    let text: String
+    let type: AnimalType
 }
 
 enum AnimalType: Character, Decodable {
-    case cat = "🐈" // каждый ответ связан с животными
+    case cat = "🐈"
     case dog = "🐩"
     case mouse = "🦝"
     case fish = "🐠"
     
-    enum CodingKeys: String, CodingKey { // сопоставление ключей со значениями
+    enum CodingKeys: String, CodingKey {
         case codingCat = "cat"
         case codingDog = "dog"
         case codingMouse = "mouse"
         case codingFish = "fish"
     }
     
-    init(from decoder: Decoder) throws { // перебираем значения из джейсона и возвращаем значения перечисления
+    init(from decoder: Decoder) throws {
         
         let container = try decoder.container(keyedBy: CodingKeys.self)
         
@@ -49,7 +49,7 @@ enum AnimalType: Character, Decodable {
         }
     }
     
-    var definitionAnimal: String { // связываем кейс с описанием (результаты)
+    var definitionAnimal: String { 
         switch self {
         case .cat:
             return "You are restrained and love freedom. You value not the quantity, but the quality of your friends"

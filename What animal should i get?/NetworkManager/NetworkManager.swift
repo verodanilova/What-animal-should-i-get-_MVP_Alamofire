@@ -8,12 +8,9 @@
 import UIKit
 import Alamofire
 
-class NetworkManager {
+extension Question {
     
-    var session = ""
-    
-    
-    func getQuestionsNetwork() {
+    static func getQuestionsNetwork(completionHandler: @escaping ([Question]?) -> Void) {
         
         let idFile = "1jvtQz8jbQL43mZXgzl-tzSMAPwSygpiM"
         
@@ -23,15 +20,15 @@ class NetworkManager {
             .responseData { dataResponse in
                 switch dataResponse.result {
                 case .success(let value):
-                    print(value)
+                    
                     let decoder = JSONDecoder()
-                   
                     
                     do {
-                        let Questions = try decoder.decode([Question].self, from: value)
-                     //    DispatchQueue.main.async {
-                            print(Questions)
-                     //     }
+                        let questionsFromJSON = try decoder.decode([Question].self, from: value)
+                        print(questionsFromJSON)
+                        DispatchQueue.global(qos: .userInitiated) {
+                            completionHandler(questionsFromJSON)
+                        }
                     } catch {
                         print("error.localizedDescription")
                     }
@@ -41,26 +38,3 @@ class NetworkManager {
             }
     }
 }
-
-
-
-
-
-//
-//
-// 3 - эта функция должна возвращать массив структур
-// 4 - работа в фоне
-
-//func alamofireGetButtonPressed() {
-//  AF.request(URLExamples.exampleTwo.rawValue)
-//   .validate()
-//   .responseJSON { dataResponse in
-//      switch dataResponse.result {
-//      case .success(let value):
-//        self.courses = Course.getCourses(from: value) ?? []
-//      DispatchQueue.main.async {
-//          self.tableView.reloadData()
-//     }
-//case .failure(let error):
-//   print(error)
-// }
