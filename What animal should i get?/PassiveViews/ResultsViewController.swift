@@ -28,7 +28,7 @@ class ResultsViewController: UIViewController {
 }
 
 extension ResultsViewController: ResultsViewProtocol {
-    internal func updateResult() {
+    func updateResult() {
         
         var frequencyOfAnimals: [AnimalType: Int] = [:]
         let animals = answers.map { $0.type }
@@ -47,7 +47,7 @@ extension ResultsViewController: ResultsViewProtocol {
         updateUI(with: mostFrequencyAnimal)
     }
     
-    internal func updateUI(with animal: AnimalType) {
+    func updateUI(with animal: AnimalType) {
         animalTypeLabel.text = "Your animal - \(animal.rawValue)!"
         discriptionLabel.text = animal.definitionAnimal
     }

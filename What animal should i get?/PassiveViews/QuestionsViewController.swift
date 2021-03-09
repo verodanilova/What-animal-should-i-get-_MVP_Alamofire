@@ -9,14 +9,13 @@ import UIKit
 import Alamofire
 
 protocol QuestionViewProtocol: class {
-    
+    func getNetworkQuestions()
     func updateUI()
     func showCurrentAnswers(for type: ResponseType)
     func showSingleAnswers(with answers: [Answer])
     func showMultipleAnswers(with answers: [Answer])
     func showRangedAnswers(with answers: [Answer])
     func nextQuestion()
-    func getNetworkQuestions()
 }
 
 class QuestionsViewController: UIViewController {
@@ -53,6 +52,7 @@ class QuestionsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         getNetworkQuestions()
     }
     
@@ -104,6 +104,7 @@ extension QuestionsViewController: QuestionViewProtocol {
                 }
                 print(questions)
             }
+            
             activityIndicator.hidesWhenStopped = true
             updateUI()
         }
@@ -170,7 +171,6 @@ extension QuestionsViewController: QuestionViewProtocol {
         questionIndex += 1
         
         if questionIndex < questions.count {
-            
             updateUI()
         } else {
             performSegue(withIdentifier: "resultSegue", sender: nil)
