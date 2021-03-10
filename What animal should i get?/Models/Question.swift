@@ -5,26 +5,27 @@
 //  Created by Tanya on 13.02.2021.
 //
 
-enum ResponseType {
-    case single // одиночные
-    case multiple // множественные
-    case ranged // диапозон
+struct Question: Decodable {
+    let text: String
+    let type: ResponseType
+    let answers: [Answer]
 }
 
-struct Question {
-    let text: String // вопросы
-    let type: ResponseType // тип вопроса
-    let answers: [Answer] // ответы
+enum ResponseType: String, Decodable {
+    case single
+    case multiple
+    case ranged
 }
 
 extension Question {
-    static func getQuestions() -> [Question] {
+    
+    static func getQuestions() -> [Question] { 
         return [
             Question(
                 text: "How do you like to relax?",
                 type: .single,
                 answers: [
-                    Answer(text: "Actively", type: .dog),
+                    Answer(text: "Actively", type: .cat),
                     Answer(text: "Passively", type: .fish),
                     Answer(text: "Always different", type: .cat),
                     Answer(text: "Rest - is not mine", type: .mouse)

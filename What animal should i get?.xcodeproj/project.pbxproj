@@ -3,33 +3,49 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B0C69C625DED5D10042A9D9 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0C69C525DED5D10042A9D9 /* NetworkManager.swift */; };
 		2B1C003A25D6D70E00211BD8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1C003925D6D70E00211BD8 /* AppDelegate.swift */; };
 		2B1C003C25D6D70E00211BD8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1C003B25D6D70E00211BD8 /* SceneDelegate.swift */; };
-		2B1C003E25D6D70E00211BD8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1C003D25D6D70E00211BD8 /* ViewController.swift */; };
+		2B1C003E25D6D70E00211BD8 /* IntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1C003D25D6D70E00211BD8 /* IntroductionViewController.swift */; };
 		2B1C004125D6D70E00211BD8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B1C003F25D6D70E00211BD8 /* Main.storyboard */; };
 		2B1C004425D6D70E00211BD8 /* What_animal_should_i_get_.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2B1C004225D6D70E00211BD8 /* What_animal_should_i_get_.xcdatamodeld */; };
 		2B1C004625D6D71100211BD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B1C004525D6D71100211BD8 /* Assets.xcassets */; };
 		2B1C004925D6D71100211BD8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B1C004725D6D71100211BD8 /* LaunchScreen.storyboard */; };
+		2B30629425DAB15E00365EC4 /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B30629325DAB15E00365EC4 /* QuestionsViewController.swift */; };
+		2B30629725DAB1A100365EC4 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B30629625DAB1A100365EC4 /* ResultsViewController.swift */; };
 		2B92FA2B25D84B9D001BC999 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B92FA2A25D84B9D001BC999 /* Question.swift */; };
 		2B92FA2E25D84BE3001BC999 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B92FA2D25D84BE3001BC999 /* Answer.swift */; };
+		2BCA437F25DDA8C700007501 /* IntroductionPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCA437E25DDA8C700007501 /* IntroductionPresenterProtocol.swift */; };
+		2BCA438225DDA8F800007501 /* QuestionsPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCA438125DDA8F800007501 /* QuestionsPresenterProtocol.swift */; };
+		2BCA438725DDA98800007501 /* ResultsPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCA438625DDA98800007501 /* ResultsPresenterProtocol.swift */; };
+		E549703AA59E7C182F66FD45 /* Pods_What_animal_should_i_get_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21D994B43042DE6CF5C5A69E /* Pods_What_animal_should_i_get_.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		21D994B43042DE6CF5C5A69E /* Pods_What_animal_should_i_get_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_What_animal_should_i_get_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B0C69C525DED5D10042A9D9 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		2B1C003625D6D70E00211BD8 /* What animal should i get?.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "What animal should i get?.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B1C003925D6D70E00211BD8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B1C003B25D6D70E00211BD8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2B1C003D25D6D70E00211BD8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2B1C003D25D6D70E00211BD8 /* IntroductionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionViewController.swift; sourceTree = "<group>"; };
 		2B1C004025D6D70E00211BD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2B1C004325D6D70E00211BD8 /* What_animal_should_i_get_.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = What_animal_should_i_get_.xcdatamodel; sourceTree = "<group>"; };
 		2B1C004525D6D71100211BD8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B1C004825D6D71100211BD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B1C004A25D6D71100211BD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B30629325DAB15E00365EC4 /* QuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsViewController.swift; sourceTree = "<group>"; };
+		2B30629625DAB1A100365EC4 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		2B92FA2A25D84B9D001BC999 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		2B92FA2D25D84BE3001BC999 /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
+		2BCA437E25DDA8C700007501 /* IntroductionPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionPresenterProtocol.swift; sourceTree = "<group>"; };
+		2BCA438125DDA8F800007501 /* QuestionsPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsPresenterProtocol.swift; sourceTree = "<group>"; };
+		2BCA438625DDA98800007501 /* ResultsPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsPresenterProtocol.swift; sourceTree = "<group>"; };
+		BD0ECA803F2F03956DFD73BF /* Pods-What animal should i get?.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-What animal should i get?.debug.xcconfig"; path = "Target Support Files/Pods-What animal should i get?/Pods-What animal should i get?.debug.xcconfig"; sourceTree = "<group>"; };
+		FE6886BBDEEA5DDFF8E49D39 /* Pods-What animal should i get?.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-What animal should i get?.release.xcconfig"; path = "Target Support Files/Pods-What animal should i get?/Pods-What animal should i get?.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,17 +53,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E549703AA59E7C182F66FD45 /* Pods_What_animal_should_i_get_.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B0C69CA25DED6280042A9D9 /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				2B0C69C525DED5D10042A9D9 /* NetworkManager.swift */,
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
 		2B1C002D25D6D70E00211BD8 = {
 			isa = PBXGroup;
 			children = (
 				2B1C003825D6D70E00211BD8 /* What animal should i get? */,
 				2B1C003725D6D70E00211BD8 /* Products */,
+				F3573898DD2C640FE59E4B09 /* Pods */,
+				52499032CF4272F270B2840E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,6 +93,7 @@
 				2B1C005325D6D78400211BD8 /* PassiveViews */,
 				2B1C005125D6D74500211BD8 /* Models */,
 				2B1C005425D6D7B600211BD8 /* Storyboards */,
+				2B0C69CA25DED6280042A9D9 /* NetworkManager */,
 				2B1C005625D6D80300211BD8 /* Sources */,
 				2B1C005525D6D7D700211BD8 /* SupportingFiles */,
 				2B1C004225D6D70E00211BD8 /* What_animal_should_i_get_.xcdatamodeld */,
@@ -85,6 +113,9 @@
 		2B1C005225D6D75B00211BD8 /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
+				2BCA438125DDA8F800007501 /* QuestionsPresenterProtocol.swift */,
+				2BCA438625DDA98800007501 /* ResultsPresenterProtocol.swift */,
+				2BCA437E25DDA8C700007501 /* IntroductionPresenterProtocol.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -92,7 +123,9 @@
 		2B1C005325D6D78400211BD8 /* PassiveViews */ = {
 			isa = PBXGroup;
 			children = (
-				2B1C003D25D6D70E00211BD8 /* ViewController.swift */,
+				2B30629325DAB15E00365EC4 /* QuestionsViewController.swift */,
+				2B30629625DAB1A100365EC4 /* ResultsViewController.swift */,
+				2B1C003D25D6D70E00211BD8 /* IntroductionViewController.swift */,
 			);
 			path = PassiveViews;
 			sourceTree = "<group>";
@@ -124,6 +157,23 @@
 			path = Sources;
 			sourceTree = "<group>";
 		};
+		52499032CF4272F270B2840E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				21D994B43042DE6CF5C5A69E /* Pods_What_animal_should_i_get_.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F3573898DD2C640FE59E4B09 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BD0ECA803F2F03956DFD73BF /* Pods-What animal should i get?.debug.xcconfig */,
+				FE6886BBDEEA5DDFF8E49D39 /* Pods-What animal should i get?.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -131,9 +181,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2B1C004D25D6D71100211BD8 /* Build configuration list for PBXNativeTarget "What animal should i get?" */;
 			buildPhases = (
+				16F4F1C3DEDA14A5AB70CACD /* [CP] Check Pods Manifest.lock */,
 				2B1C003225D6D70E00211BD8 /* Sources */,
 				2B1C003325D6D70E00211BD8 /* Frameworks */,
 				2B1C003425D6D70E00211BD8 /* Resources */,
+				8A6345663E90257081388EB8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -189,17 +241,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		16F4F1C3DEDA14A5AB70CACD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-What animal should i get?-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8A6345663E90257081388EB8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-What animal should i get?/Pods-What animal should i get?-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-What animal should i get?/Pods-What animal should i get?-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-What animal should i get?/Pods-What animal should i get?-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2B1C003225D6D70E00211BD8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				2B92FA2B25D84B9D001BC999 /* Question.swift in Sources */,
-				2B1C003E25D6D70E00211BD8 /* ViewController.swift in Sources */,
+				2B0C69C625DED5D10042A9D9 /* NetworkManager.swift in Sources */,
+				2B30629425DAB15E00365EC4 /* QuestionsViewController.swift in Sources */,
+				2B1C003E25D6D70E00211BD8 /* IntroductionViewController.swift in Sources */,
+				2BCA438225DDA8F800007501 /* QuestionsPresenterProtocol.swift in Sources */,
 				2B1C003A25D6D70E00211BD8 /* AppDelegate.swift in Sources */,
+				2BCA437F25DDA8C700007501 /* IntroductionPresenterProtocol.swift in Sources */,
+				2BCA438725DDA98800007501 /* ResultsPresenterProtocol.swift in Sources */,
 				2B92FA2E25D84BE3001BC999 /* Answer.swift in Sources */,
 				2B1C003C25D6D70E00211BD8 /* SceneDelegate.swift in Sources */,
 				2B1C004425D6D70E00211BD8 /* What_animal_should_i_get_.xcdatamodeld in Sources */,
+				2B30629725DAB1A100365EC4 /* ResultsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +443,7 @@
 		};
 		2B1C004E25D6D71100211BD8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD0ECA803F2F03956DFD73BF /* Pods-What animal should i get?.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -361,6 +462,7 @@
 		};
 		2B1C004F25D6D71100211BD8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE6886BBDEEA5DDFF8E49D39 /* Pods-What animal should i get?.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
